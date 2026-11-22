@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <title>Unluck — Leitor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Unluck início">
+        <span class="brand-mark">U</span>
+        <span>UNLUCK<span class="brand-dot">.</span></span>
+      </a>
+
+      <div class="side-label">SUA BIBLIOTECA</div>
+
+      <!-- VOLUME I -->
+      <button class="library-book active" id="bookVolume1" data-volume="Volume I">
+        <span class="mini-cover">
+          <img src="cover-volume-1.png" alt="Capa de Unluck — Volume I">
+        </span>
+
+        <span class="book-meta">
+          <strong>Unluck</strong>
+          <small>Volume I · O Erro</small>
+          <em id="sidebarProgress1">0% lido</em>
+        </span>
+      </button>
+
+      <!-- VOLUME II -->
+      <button class="library-book" id="bookVolume2" data-volume="Volume II">
+        <span class="mini-cover volume-two-cover">
+          <span>
+            UNLUCK
+            <small>VOLUME II</small>
+          </span>
+        </span>
+
+        <span class="book-meta">
+          <strong>Unluck</strong>
+          <small>Volume II · Quem Te Enviou?</small>
+          <em id="sidebarProgress2">0% lido</em>
+        </span>
+      </button>
+
+      <div class="side-label chapter-label">CAPÍTULOS DO VOLUME</div>
+      <div class="chapter-list" id="chapterList"></div>
+
+      <div class="sidebar-bottom">
+        <div class="side-label">LEITURA</div>
+
+        <button class="side-action" id="bookmarkListBtn">
+          <span>◇</span> Marcadores
+          <b id="bookmarkCount">0</b>
+        </button>
+
+        <button class="side-action" id="settingsBtn">
+          <span>⚙</span> Preferências
+        </button>
+
+        <div class="sidebar-note">
+          “O universo não dava a mínima.”
+          <small id="sidebarNoteVolume">UNLUCK · VOLUME I</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Abrir menu">☰</button>
+
+        <div class="breadcrumb">
+          <span>Biblioteca</span>
+          <b>/</b>
+          <strong>Unluck</strong>
+        </div>
+
+        <div class="top-actions">
+          <button class="icon-btn" id="searchBtn" title="Buscar no livro">⌕</button>
+          <button class="icon-btn" id="bookmarkBtn" title="Salvar marcador">◇</button>
+          <button class="avatar" title="Leitor">L</button>
+        </div>
+      </header>
+
+      <section class="reader-wrap">
+        <div class="reader-topline">
+          <span class="eyebrow" id="volumeLabel">VOLUME I</span>
+
+          <span class="reading-status">
+            <span class="status-dot"></span>
+            <span id="statusText">PRONTO PARA LER</span>
+          </span>
+        </div>
+
+        <div class="reader-heading">
+          <div>
+            <div class="chapter-kicker" id="chapterKicker">CAPÍTULO 1</div>
+            <h1 id="chapterTitle">O Erro</h1>
+            <p class="chapter-subtitle" id="chapterSubtitle">
+              Ycaro Nascimento — 0% de sorte
+            </p>
+          </div>
+
+          <button class="chapter-menu" id="chapterMenuBtn" title="Lista de capítulos">
+            •••
+          </button>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="progress-caption">
+          <span id="chapterProgress">Capítulo 1 de 10</span>
+          <span id="overallProgress">0% do volume</span>
+        </div>
+
+        <article class="reading-page" id="readingPage" aria-live="polite"></article>
+
+        <div class="reader-footer">
+          <button class="nav-button previous" id="prevBtn">
+            <span>←</span>
+            <span>
+              <small>ANTERIOR</small>
+              <strong>Capítulo anterior</strong>
+            </span>
+          </button>
+
+          <div class="page-indicator">
+            <span id="currentChapterNum">01</span>
+            <i>/</i>
+            <span id="totalChapters">10</span>
+          </div>
+
+          <button class="nav-button next" id="nextBtn">
+            <span>
+              <small>PRÓXIMO</small>
+              <strong>Próximo capítulo</strong>
+            </span>
+            <span>→</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- BUSCA -->
+  <section class="modal" id="searchModal" aria-label="Buscar no livro">
+    <div class="modal-head">
+      <div>
+        <span class="eyebrow">PESQUISA</span>
+        <h2>Buscar no livro</h2>
+      </div>
+      <button class="close-btn" data-close>×</button>
+    </div>
+
+    <input
+      id="searchInput"
+      class="text-input"
+      type="search"
+      placeholder="Digite uma palavra ou frase..."
+    >
+
+    <div id="searchResults" class="search-results">
+      <p class="muted">Pesquise em todo o texto de Unluck.</p>
+    </div>
+  </section>
+
+  <!-- PREFERÊNCIAS -->
+  <section class="modal settings-modal" id="settingsModal" aria-label="Preferências de leitura">
+    <div class="modal-head">
+      <div>
+        <span class="eyebrow">PERSONALIZAÇÃO</span>
+        <h2>Preferências</h2>
+      </div>
+      <button class="close-btn" data-close>×</button>
+    </div>
+
+    <label class="setting-row">
+      <span>
+        Tamanho do texto
+        <small>Conforto durante a leitura</small>
+      </span>
+
+      <div class="font-controls">
+        <button id="fontDown">A−</button>
+        <strong id="fontSizeValue">19px</strong>
+        <button id="fontUp">A+</button>
+      </div>
+    </label>
+
+    <label class="setting-row">
+      <span>
+        Espaçamento
+        <small>Altura entre as linhas</small>
+      </span>
+
+      <select id="lineHeight">
+        <option value="1.75">Compacto</option>
+        <option value="1.95" selected>Confortável</option>
+        <option value="2.15">Amplo</option>
+      </select>
+    </label>
+
+    <label class="setting-row">
+      <span>
+        Largura do texto
+        <small>Área de leitura</small>
+      </span>
+
+      <select id="readingWidth">
+        <option value="650">Estreita</option>
+        <option value="740" selected>Clássica</option>
+        <option value="850">Ampla</option>
+      </select>
+    </label>
+  </section>
+
+  <!-- MARCADORES -->
+  <section class="modal" id="bookmarksModal" aria-label="Marcadores salvos">
+    <div class="modal-head">
+      <div>
+        <span class="eyebrow">SUA LEITURA</span>
+        <h2>Marcadores</h2>
+      </div>
+      <button class="close-btn" data-close>×</button>
+    </div>
+
+    <div id="bookmarkItems" class="bookmark-items"></div>
+  </section>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="book.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
