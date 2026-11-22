@@ -1,162 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicholas Kim — Sol de Midas</title>
-    <link rel="stylesheet" href="css/kim.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b2a">
+<meta name="description" content="Portfólio pessoal de Nicholas Kim — Sol De Midas.">
+<title>Nicholas Kim · Sol De Midas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/kim.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <a href="index.html" class="header-back">← Equipe</a>
-        <span class="header-brand">Sol de Midas</span>
-    </header>
+<header class="nav">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <g stroke="#f0bb4b" stroke-width="2.5" stroke-linecap="round">
+          <path d="M32 2v14M32 48v14M2 32h14M48 32h14"/>
+          <path d="M11 11l9 9M44 44l9 9M53 11l-9 9M20 44l-9 9" stroke-width="2"/>
+        </g>
+        <circle cx="32" cy="32" r="12" fill="#f0bb4b"/>
+      </svg>
+      Sol De Midas
+    </a>
+    <a class="link" href="#sobre">Sobre nós</a>
+  </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="hero-photo">
-                <img src="assets/Kim/Dormindo.jpg" alt="Nicholas Kim">
-            </div>
-            <div class="hero-info">
-                <p class="hero-label">Membro</p>
-                <h1 class="hero-name">Nicholas Kim</h1>
-                <div class="hero-quotes">
-                    <blockquote>Sou aluno Germinare apaixonado por lutar, back-end e resenhas ✌️</blockquote>
-                    <blockquote>Tenho 16 anos... a partir de hoje... 🤞</blockquote>
-                </div>
-                <ul class="social-list">
-                    <li>Whatsapp</li>
-                    <li>Youtube</li>
-                    <li>Instagram: <span>clonacartao.mpk</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <svg class="rings" viewBox="0 0 900 900" aria-hidden="true">
+    <g fill="none" stroke="#161a57" stroke-width="2">
+      <circle cx="450" cy="450" r="440"/>
+      <circle cx="450" cy="450" r="360"/>
+      <circle cx="450" cy="450" r="280"/>
+    </g>
+    <g fill="#141852">
+      <polygon points="450,0 480,120 420,120"/>
+      <polygon points="450,900 480,780 420,780"/>
+      <polygon points="0,450 120,420 120,480"/>
+      <polygon points="900,450 780,420 780,480"/>
+    </g>
+  </svg>
 
-    <main class="content">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">Nicholas <span>Kim</span></h1>
+      <p class="role">Função na equipe: tudo</p>
+      <p class="verse">Um pouco sobre mim, minhas habilidades<br>e os projetos que fazem parte da minha jornada.</p>
+      <div class="buttons">
+        <a class="btn gold" href="#contato">Falar comigo</a>
+        <a class="btn outline" href="#projetos">Ver projetos</a>
+      </div>
+      <p class="scroll">Role para conhecer ↓</p>
+    </div>
 
-        <section class="block">
-            <h2 class="section-title">Hobbies</h2>
-            <ul class="tag-list">
-                <li>🎮 Jogar vídeo game <span class="tag-note">(em falta)</span></li>
-                <li>♟️ Jogar xadrez</li>
-                <li>🥋 Treinar Kung Fu</li>
-                <li>💣 Jogar campo minado <span class="tag-note">(not em falta)</span></li>
-            </ul>
-        </section>
+    <div class="portrait">
+      <div class="badge"><b>Nicholas</b><small>Kim</small></div>
+      <div class="frame">
+        <img src="assets/Kim/foto-perfil.jpg" alt="Fotografia de Nicholas em atividade">
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section class="block">
-            <h2 class="section-title">O que toca no meu Spotify</h2>
-            <div class="spotify-empty">
-                <img src="assets/Kim/conjunto-vazio.jpg" alt="Conjunto vazio">
-                <p>Eu não tenho Spotify...</p>
-            </div>
-            <div class="music-grid">
-                <a href="https://www.youtube.com/watch?v=ax294Sq5phc" target="_blank" class="music-card">
-                    <img src="assets/Kim/Libets-Delay.jpg" alt="Libet's Delay">
-                    <span>Libet's Delay</span>
-                </a>
-                <a href="https://www.youtube.com/watch?v=WNcsUNKlAKw" target="_blank" class="music-card">
-                    <img src="assets/Kim/Clair-De-Lune.jpg" alt="Clair De Lune">
-                    <span>Clair De Lune</span>
-                </a>
-                <a href="https://www.youtube.com/watch?v=5Q1a9oQhkyU" target="_blank" class="music-card">
-                    <img src="assets/Kim/Cupid.jpeg" alt="Cupid">
-                    <span>Cupid</span>
-                </a>
-            </div>
-        </section>
+<section class="about" id="sobre" aria-labelledby="about-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Sobre</p>
+      <h2 id="about-title">Quem é essa pessoa</h2>
+      <p>Nicholas, um jovem curioso e criativo, sempre em busca de aprender, experimentar e transformar ideias em projetos.</p>
+    </div>
+    <div class="facts" aria-label="Informações pessoais">
+      <div class="fact"><small>Idade</small><strong>16 anos</strong></div>
+      <div class="fact"><small>Cidade</small><strong>São Paulo, SP</strong></div>
+      <div class="fact"><small>Área atual</small><strong>Pré-Estudante_de_férias</strong></div>
+      <div class="fact"><small>Personalidade</small><strong>Analítico</strong></div>
+    </div>
+  </div>
+</section>
 
-        <section class="block">
-            <h2 class="section-title">Algumas fotos minhas</h2>
-            <div class="photo-grid">
-                <div class="photo-item">
-                    <img src="assets/Kim/Bebê.jpg" alt="Um bebê feliz">
-                    <p class="photo-label"><strong>Muito</strong> <abbr title="detalhe que essas fotos são antigas, bem antigas mesmo tipo muito antigas. Antigas demais">antiga</abbr></p>
-                </div>
-                <div class="photo-item">
-                    <img src="assets/Kim/Formal.jpg" alt="Foto formal">
-                    <p class="photo-label">Meio antiga</p>
-                </div>
-                <div class="photo-item">
-                    <img src="assets/Kim/Kung-fu.jpg" alt="Luta de Kung Fu">
-                    <p class="photo-label">Esse ano</p>
-                </div>
-                <div class="photo-item">
-                    <img src="assets/Kim/Kung-fu2.jpeg" alt="Kung Fu 2">
-                    <p class="photo-label">Esse ano também</p>
-                </div>
-            </div>
-        </section>
+<section class="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <p class="eyebrow">Habilidades</p>
+    <h2 id="skills-title">O que sabe fazer</h2>
+    <div class="skill-grid">
+      <div><div class="skill-head"><span>UI/UX</span><span>60%</span></div><div class="bar"><i style="width:60%"></i></div></div>
+      <div><div class="skill-head"><span>Cálculo</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
+      <div><div class="skill-head"><span>Lógica</span><span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
+      <div><div class="skill-head"><span>Tech</span><span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
+    </div>
+  </div>
+</section>
 
-        <section class="block">
-            <h2 class="section-title">Locais que já visitei</h2>
-            <div class="places-grid">
-                <a href="https://www.instagram.com/nacionalkartindoorsp/" target="_blank" class="place-card">
-                    <img src="assets/Kim/Carro_HELLYEA.jpg" alt="Nacional Kart Indoor SP">
-                    <div class="place-info">
-                        <strong>Nacional Kart Indoor SP</strong>
-                        <span>Shopping Penha</span>
-                    </div>
-                </a>
-                <a href="https://iflybrazil.com/" target="_blank" class="place-card">
-                    <img src="assets/Kim/iFly.jpg" alt="iFLY São Paulo">
-                    <div class="place-info">
-                        <strong>iFLY São Paulo</strong>
-                        <span>Pinheiros</span>
-                    </div>
-                </a>
-                <a href="https://barilocheparabrasileiros.com.br/" target="_blank" class="place-card">
-                    <img src="assets/Kim/Neve.jpg" alt="Bariloche">
-                    <div class="place-info">
-                        <strong>Bariloche</strong>
-                        <span>Argentina</span>
-                    </div>
-                </a>
-            </div>
-        </section>
+<section class="projects" id="projetos" aria-labelledby="projects-title">
+  <div class="wrap">
+    <p class="eyebrow">Projetos</p>
+    <h2 id="projects-title">O que já fez</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb"><img src="assets/Kim/apollo-logo.jpeg" alt="Marca gráfica laranja e amarela do projeto Apollo"></div>
+        <h3>Apollo</h3>
+        <p>Um aplicativo de gestão e monitoramento inteligênte de sistemas fotovoltaicos.</p>
+        <a href="#contato">Ver projeto →</a>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/Kim/cubo-magico.jpg" alt="Cubo mágico colorido"></div>
+        <h3>Cubo Mágico</h3>
+        <p>Uma passatempo que mistura lógica, padrões e cores bonitas.</p>
+        <a href="#contato">Ver projeto →</a>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/Kim/campo-minado.png" alt="Imagem do projeto Campo Minado"></div>
+        <h3>Campo Minado</h3>
+        <p>Outro passatempo clássico para praticar lógica em uma matriz mais arriscada.</p>
+        <a href="#contato">Ver projeto →</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-        <section class="block">
-            <h2 class="section-title">Locais que gostaria de visitar</h2>
-            <div class="places-grid">
-                <a href="https://www.smartfit.com.br/academias/avenida-amador-bueno/" target="_blank" class="place-card">
-                    <img src="assets/Kim/SmartFit.jpg" alt="Academia Smart Fit">
-                    <div class="place-info">
-                        <strong>Academia</strong>
-                        <span>Qualquer uma</span>
-                    </div>
-                </a>
-                <a href="https://re4058.wixsite.com/website" target="_blank" class="place-card">
-                    <img src="assets/Kim/ASKF.jpg" alt="ASKF">
-                    <div class="place-info">
-                        <strong>ASKF</strong>
-                        <span>Associação Shaolin de Kung Fu — Av. Diógenes Ribeiro de Lima, 2419</span>
-                    </div>
-                </a>
-                <a href="https://pt.wikipedia.org/wiki/Ch%C3%A1cara" target="_blank" class="place-card">
-                    <img src="assets/Kim/Chacara.jpg" alt="Chácara">
-                    <div class="place-info">
-                        <strong>Chácara de alguém rico</strong>
-                        <span>Qualquer uma</span>
-                    </div>
-                </a>
-                <a href="https://pt.wikipedia.org/wiki/Vale_do_Sil%C3%ADcio" target="_blank" class="place-card">
-                    <img src="assets/Kim/Silicio.jpeg" alt="Vale do Silício">
-                    <div class="place-info">
-                        <strong>Vale do Silício</strong>
-                        <span>Califórnia, EUA</span>
-                    </div>
-                </a>
-            </div>
-        </section>
+<section class="quote" aria-label="Frase de destaque">
+  <blockquote>"Não me basta fazer funcionar; preciso entender, questionar e descobrir até onde posso chegar para depois superar esse limite."</blockquote>
+  <small>— Nicholas</small>
+</section>
 
-    </main>
-
-    <footer class="site-footer">
-        <span>© 2026 Sol de Midas</span>
-        <a href="index.html">← Voltar para a equipe</a>
-    </footer>
+<section class="contact" id="contato" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2 id="contact-title">Vamos conversar?</h2>
+        <p class="lead">Estou à disposição</p>
+        <a class="btn gold" href="mailto:nicholas.20260223@institutojef.org.br">Enviar e-mail</a>
+      </div>
+      <div class="list">
+        <div class="item"><div class="ico">✉</div><div><small>E-mail</small><a target="_blank" href="mailto:nicholas.20260223@institutojef.org.br"><span class="v">nicholas.20260223@institutojef.org.br</span></a></div></div>
+        <div class="item"><div class="ico">◎</div><div><small>Instagram</small><a target="_blank" href="https://www.instagram.com/clonacartao.mpk/"><span class="v">@clonacartao.mpk</span></a></div></div>
+        <div class="item"><div class="ico">▶</div><div><small>Github</small><a target="_blank" href="https://github.com/Nichiruto0/"><span class="v">Nichiruto0</span></a></div></div>
+      </div>
+    </div>
+    <p class="foot">© 2026 Sol De Midas · Todos os direitos reservados.</p>
+  </div>
+</section>
 
 </body>
 </html>
