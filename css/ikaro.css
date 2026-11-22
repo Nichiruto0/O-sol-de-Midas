@@ -1,0 +1,586 @@
+/* Tema inspirado em "Unluck": água escura do Tietê, azul frio, sangue na água */
+:root {
+  --abismo: #040b11;
+  --fundo: #07151d;
+  --agua: #0a1f2b;
+  --card: #0c2330;
+  --linha: #1b4153;
+  --gelo: #cfe6ee;
+  --azul: #6fb0c9;
+  --sangue: #b3202a;
+  --sangue-vivo: #ee5a61;
+  --ouro: #f0bb4b;
+  --muted: #8fa9b5;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Source Serif 4", Georgia, serif;
+  background: var(--fundo);
+  color: var(--gelo);
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+h1,
+h2,
+h3,
+.btn,
+.brand,
+.taxa,
+.alerta-topo,
+.badge b {
+  font-family: "Oswald", sans-serif;
+}
+h2 {
+  font-weight: 700;
+  font-size: 2.7rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.eyebrow {
+  font-style: italic;
+  color: var(--sangue-vivo);
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.cena {
+  text-align: center;
+  color: var(--muted);
+  letter-spacing: 0.4em;
+  margin-bottom: 46px;
+}
+a:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 3px;
+}
+
+/* NAV */
+.nav {
+  background: var(--abismo);
+  border-bottom: 1px solid var(--linha);
+  position: relative;
+  z-index: 5;
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86px;
+  max-width: none;
+  padding: 0 34px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--ouro);
+  font-weight: 700;
+  font-size: 1.45rem;
+}
+.brand svg {
+  width: 46px;
+  height: 46px;
+}
+.nav a.link {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-right: 60px;
+  color: var(--gelo);
+}
+
+/* HERO: luz do fim de tarde cortada em fragmentos, vista de baixo d'água */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 80px;
+  color: #fff;
+  background: radial-gradient(
+    70% 90% at 78% 0%,
+    #164a61 0%,
+    #0a2a3a 38%,
+    var(--abismo) 85%
+  );
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    105deg,
+    transparent 0 80px,
+    rgba(140, 200, 225, 0.07) 80px 120px,
+    transparent 120px 210px
+  );
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 85%);
+  mask-image: linear-gradient(to bottom, #000, transparent 85%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--fundo));
+}
+.hero .wrap {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero h1 {
+  font-weight: 700;
+  font-size: 6.6rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  animation: glitch 0.9s steps(1) 0.3s 1 both;
+}
+.hero h1 span {
+  display: block;
+  color: var(--gelo);
+}
+@keyframes glitch {
+  0%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+  12% {
+    text-shadow:
+      -5px 0 var(--sangue),
+      5px 0 var(--azul);
+    transform: translateX(3px);
+  }
+  24% {
+    text-shadow:
+      4px 0 var(--sangue),
+      -4px 0 var(--azul);
+    transform: translateX(-4px) skewX(-3deg);
+  }
+  36% {
+    text-shadow: none;
+    transform: none;
+  }
+  58% {
+    text-shadow:
+      -3px 0 var(--sangue),
+      3px 0 var(--azul);
+    transform: translateX(2px);
+  }
+  70% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+.taxa {
+  margin-top: 26px;
+  color: var(--sangue-vivo);
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.role {
+  font-size: 1.5rem;
+  margin-top: 14px;
+  max-width: 560px;
+  line-height: 1.35;
+}
+.verse {
+  color: var(--muted);
+  margin-top: 18px;
+  font-size: 1.08rem;
+  font-style: italic;
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 48px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.15s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn.solid {
+  background: var(--sangue);
+  color: #fff;
+}
+.btn.outline {
+  border: 2px solid var(--azul);
+  color: var(--gelo);
+}
+.scroll {
+  margin-top: 56px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.portrait {
+  position: relative;
+  justify-self: center;
+  width: 430px;
+  max-width: 100%;
+}
+.portrait .frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1.28;
+  border-radius: 215px 215px 0 0;
+  background: linear-gradient(160deg, #2b6f89, #0a2a3a);
+  padding: 0 0 0 0;
+  box-shadow: 12px 12px 0 var(--sangue);
+}
+.portrait .frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 215px 215px 0 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, rgba(4, 11, 17, 0.65), transparent 45%),
+    rgba(20, 90, 120, 0.22);
+  mix-blend-mode: multiply;
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 215px 215px 0 0;
+  display: block;
+  filter: saturate(0.75) contrast(1.05);
+}
+.badge {
+  position: absolute;
+  left: -52px;
+  top: 40px;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  border: 3px solid var(--sangue-vivo);
+  background: var(--abismo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+.badge b {
+  color: var(--sangue-vivo);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.badge small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+/* SOBRE */
+.about {
+  padding: 40px 0 80px;
+}
+.about .cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.about h2 {
+  margin-bottom: 16px;
+}
+.about p:not(.eyebrow):not(.cena) {
+  color: var(--muted);
+  font-size: 1.18rem;
+  max-width: 520px;
+}
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.fact {
+  background: var(--card);
+  border: 1px solid var(--linha);
+  border-left: 5px solid var(--sangue);
+  border-radius: 4px;
+  padding: 24px 28px;
+}
+.fact small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.fact strong {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--gelo);
+}
+
+/* HABILIDADES: taxa de sorte (vermelho < 40%, azul até 69%, gelo acima) */
+.skills {
+  background: var(--agua);
+  padding: 64px 0 74px;
+  border-top: 1px solid var(--linha);
+  border-bottom: 1px solid var(--linha);
+}
+.skill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px 80px;
+  margin-top: 46px;
+}
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.12rem;
+  margin-bottom: 12px;
+}
+.skill-head span:last-child {
+  font-family: "Oswald", sans-serif;
+  color: var(--muted);
+}
+.bar {
+  height: 8px;
+  background: var(--abismo);
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+}
+.bar.baixa i {
+  background: var(--sangue-vivo);
+}
+.bar.media i {
+  background: var(--azul);
+}
+.bar.alta i {
+  background: var(--gelo);
+}
+
+/* PROJETOS */
+.projects {
+  padding: 70px 0 80px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 46px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+  padding: 14px 14px 26px;
+}
+.thumb {
+  height: 240px;
+  overflow: hidden;
+  background: var(--abismo);
+  border-radius: 2px;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card h3 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 20px 8px 8px;
+}
+.card p {
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin: 0 8px 16px;
+  min-height: 48px;
+}
+.card a {
+  margin: 0 8px;
+  color: var(--sangue-vivo);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+/* FRASE: aviso de transmissão nacional */
+.alerta {
+  background: var(--sangue);
+  text-align: center;
+  padding: 48px 20px;
+  color: #fff;
+}
+.alerta-topo {
+  display: inline-block;
+  background: #fff;
+  color: var(--sangue);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  margin-bottom: 24px;
+}
+.alerta blockquote {
+  font-style: italic;
+  font-size: 2.1rem;
+  line-height: 1.3;
+}
+.alerta small {
+  display: block;
+  margin-top: 20px;
+  color: #ffd9db;
+}
+
+/* CONTATO */
+.contact {
+  background: var(--abismo);
+  padding: 72px 0 30px;
+}
+.contact .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 22px;
+}
+.contact p.lead {
+  color: var(--muted);
+  margin-bottom: 42px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 10px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.ico {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--linha);
+  color: var(--azul);
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.item small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.item .v {
+  font-size: 1.2rem;
+}
+.foot {
+  margin-top: 60px;
+  border-top: 1px solid var(--linha);
+  padding-top: 30px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 {
+    animation: none;
+  }
+  .btn {
+    transition: none;
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    padding: 60px 0;
+  }
+  .hero .wrap,
+  .about .cols,
+  .contact .grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 4.2rem;
+  }
+  .badge {
+    left: -10px;
+  }
+  .cards,
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+  .skill-grid {
+    gap: 28px;
+  }
+  .nav a.link {
+    margin-right: 0;
+  }
+  .wrap {
+    padding: 0 22px;
+  }
+  .alerta blockquote {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 520px) {
+  .facts {
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    padding: 0 32px;
+  }
+}

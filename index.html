@@ -1,62 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/index.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sol de Midas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1 style="display: flex; justify-content: center; align-items: start; font-size: 70px; margin: 0px;">Trabalho DS</h1>
-        <h2 style="display: flex; justify-content: center; align-items: start; font-size: 40px; margin: 0px 0px 100px 0px;">Página inicial - O Sol de Midas</h2>
-    </header>
-    
-    <main style="flex: 1;">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
-            <div>
-                <a href="kim.html"><img alt="kim image"></a>
-                <span>Kim</span>
-            </div>
 
-            <div>
-                <a href="davi.html">
-                    <img alt="davi image">
-                </a>
-                <span>Davi</span>
-            </div>
-            
-            <div>
-                <a href="pedro.html">
-                    <img alt="pedro image">
-                </a>
-                <span>Pedro</span>
-            </div>
-            
-            <div>
-                <a href="fernando.html">
-                    <img alt="fernando image">
-                </a>
-                <span>Fernando</span>
-            </div>
-            
-            <div>
-                <a href="ikaro.html">
-                    <img alt="ikaro image">
-                </a>
-                <span>Ikaro</span>
-            </div>
-            
-            <div>
-                <a href="miguel.html">
-                    <img alt="miguel image">
-                </a>
-                <span>Miguel</span>
-            </div>
-        </div>
-    </main>
+  <header class="topo">
+    <a class="marca" href="#inicio">
+      <img src="assets/sol.svg" alt="" width="44" height="44">
+      <span>Sol de Midas</span>
+    </a>
+    <nav>
+      <a href="#historia">Sobre nós</a>
+    </nav>
+  </header>
 
-    <footer style="display: flex; align-items: end; position: relative; width: 100%; height: 90px; background-color: black;"></footer>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <p class="hero-equipe">Equipe:</p>
+        <h1>Sol de Midas</h1>
+        <p class="hero-descricao">O Sol de Midas busca fazer trabalhos escolares e dar orgulho ao grande professor Carlinhos</p>
+        <a class="botao" href="#equipe">Conheça a equipe</a>
+      </div>
+      <img class="hero-sol" src="assets/sol.svg" alt="Sol dourado, símbolo da equipe">
+    </section>
+
+    <section class="conteudo" id="historia">
+      <h2>Nossa história</h2>
+      <p class="historia">O Sol de Midas nasceu do projeto interdisciplinar Apollo, juntando os elementos solares e a figura mitologica Midas em um trabalho só, assim a ideia foi finalmente consolidada em 2026, quando Carlinhos nos deu essa oportuniade</p>
+
+      <h2 id="equipe">Quem faz parte</h2>
+      <div class="equipe">
+        <article class="card">
+            <a href="ikaro.html">
+              <img src="assets/ikaro.png" alt="Foto de Ikaro Bueno">
+            </a>
+          <h3>Ikaro Bueno</h3>
+          <span class="rotulo">Frase</span>
+          <p>Di Di Di Di ê</p>
+        </article>
+        <article class="card">
+            <a href="kim.html">
+              <img src="assets/nicholas.png" alt="Foto de Nicholas Kim" style="object-position: 90% 15%;"">
+            </a>
+          <h3>Nicholas Kim</h3>
+          <span class="rotulo">Clássico</span>
+          <p>Calma, estou raciocinando</p>
+        </article>
+        <article class="card">
+            <a href="davi.html">
+              <img src="assets/davi.png" alt="Foto de Davi Fernandes">
+            </a>
+          <h3>Davi Fernandes</h3>
+          <span class="rotulo">Frase</span>
+          <p>Eu sou a velocidade Ka-Chow</p>
+        </article>
+        <article class="card">
+            <a href="miguel.html">
+              <img src="assets/miguel.png" alt="Foto de Miguel Bastos">
+            </a>
+          <h3>Miguel Bastos</h3>
+          <span class="rotulo">Frase</span>
+          <p>Cubo magico, verde e azul</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2026 Sol de Midas. Todos os direitos não estão reservados.</p>
+  </footer>
 
 </body>
 </html>
