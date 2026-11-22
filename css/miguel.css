@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: #0a0d2b;
+    color: #f6f1e7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.secao {
+    padding: 4rem 4rem;
+}
+
+.miolo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.etiqueta {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #b8860b;
+    margin-bottom: 0.5rem;
+}
+
+.titulo {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0a0d2b;
+    border-bottom: 1px solid #f0b94a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #f0b94a;
+}
+
+.logo-sol {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.menu a {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    margin-right: 3rem;
+}
+
+.menu a:hover {
+    color: #f0b94a;
+}
+
+.apresentacao {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 6rem 6rem;
+    min-height: 800px;
+    background-color: #0a0d2b;
+}
+
+.apresentacao::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("ImagensPG/Fundo2.png");
+    background-repeat: no-repeat;
+    background-position: 110% -10%;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+.texto-apresentacao {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+    max-width: 500px;
+}
+
+.nome {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 5.5rem;
+    color: #f6f1e7;
+    margin-bottom: 2rem;
+}
+
+.sobrenome {
+    color: #f0b94a;
+}
+
+.funcao {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.descricao {
+    font-family: "Lato", sans-serif;
+    color: #9a9cc0;
+    margin-bottom: 2rem;
+}
+
+.botoes {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.botao {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 2px solid #f0b94a;
+    border-radius: 50px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.botao-vazado {
+    background-color: transparent;
+    color: #f6f1e7;
+}
+
+.botao-vazado:hover {
+    background-color: #f0b94a;
+    color: #0a0d2b;
+}
+
+.role {
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    color: #9a9cc0;
+    margin-top: 2rem;
+}
+
+.area-foto {
+    position: relative;
+    z-index: 3;
+    width: 400px;
+    height: 500px;
+    margin-right: 3rem;
+}
+
+.moldura {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: #f0b94a;
+    border-radius: 200px 200px 0 0;
+}
+
+.foto-perfil {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1f55;
+
+    background-image: url("ImagensPG/FOTOEU.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 200px 200px 0 0;
+}
+
+.selo {
+    position: absolute;
+    top: 1rem;
+    left: -3rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #0a0d2b;
+    border: 2px solid #f0b94a;
+    border-radius: 50%;
+    font-family: "Lato", sans-serif;
+    font-size: 0.6rem;
+}
+
+.selo b {
+    font-size: 0.8rem;
+    color: #f0b94a;
+}
+
+.sobre {
+    background-color: #f6f1e7;
+    color: #1a1a3a;
+}
+
+.sobre .miolo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.sobre-texto {
+    width: 40%;
+    min-width: 300px;
+}
+
+.sobre-texto p {
+    font-family: "Lato", sans-serif;
+    color: #6b6b7b;
+}
+
+.cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 50%;
+    min-width: 300px;
+}
+
+.cartao {
+    width: 45%;
+    min-width: 200px;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    border: 2px solid #ece6d8;
+    border-left: 6px solid #f0b94a;
+    border-radius: 1rem;
+}
+
+.cartao span {
+    display: block;
+    font-size: 0.8rem;
+    color: #6b6b7b;
+    margin-bottom: 1rem;
+}
+
+.cartao b {
+    font-size: 1.5rem;
+}
+
+.habilidades {
+    background-color: #10133a;
+}
+
+.habilidades .etiqueta {
+    color: #f0b94a;
+}
+
+.lista-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 5rem;
+}
+
+.habilidade {
+    width: 45%;
+    min-width: 300px;
+}
+
+.habilidade-texto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.habilidade-texto span:last-child {
+    font-size: 0.8rem;
+    color: #9a9cc0;
+}
+
+.barra-fundo {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #1c1f55;
+    border-radius: 50px;
+}
+
+.barra-progresso {
+    height: 0.5rem;
+    background-color: #f0b94a;
+    border-radius: 50px;
+}
+
+.p70 {
+    width: 70%;
+}
+
+.p40 {
+    width: 40%;
+}
+
+.p50 {
+    width: 50%;
+}
+
+.p999 {
+    width: 200%;
+}
+
+.projetos {
+    background-color: #f6f1e7;
+    color: #1a1a3a;
+}
+
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.projeto {
+    flex: 1;
+    min-width: 260px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 2px solid #ece6d8;
+    border-radius: 1rem;
+}
+
+.imagem-projeto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-bottom: 1rem;
+    background-color: #e8e2d4;
+    border-radius: 1rem;
+    color: #6b6b7b;
+}
+
+.projeto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.projeto p {
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    color: #6b6b7b;
+    margin-bottom: 1rem;
+}
+
+.projeto a {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #b8860b;
+    text-decoration: underline;
+}
+
+.projeto a:hover {
+    color: #1a1a3a;
+}
+
+.frase {
+    padding: 3rem 2rem;
+    background-color: #f0b94a;
+    color: #1a1a3a;
+    text-align: center;
+}
+
+.frase-texto {
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.frase-legenda {
+    font-size: 0.8rem;
+}
+
+.rodape {
+    padding: 0 4rem 2rem 4rem;
+    background-color: #0a0d2b;
+    text-align: center;
+}
+
+.rodape hr {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    border: none;
+    border-top: 1px solid #1c1f55;
+}
+
+.rodape p {
+    font-size: 0.6rem;
+    color: #9a9cc0;
+}
+
+.imagem-projeto {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagem-apollo {
+    background-image: url("ImagensPG/APOLLO.png");
+}
+
+.imagem-roblox {
+    background-image: url("ImagensPG/RobloxFOTO.png");
+}
+
+.imagem-orgulho {
+    background-image: url("ImagensPG/Vector.png");
+}
