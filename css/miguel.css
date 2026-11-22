@@ -100,7 +100,7 @@ a {
     width: 100%;
     height: 100%;
 
-    background-image: url("ImagensPG/Fundo2.png");
+    background-image: url("../assets/Miguel/Fundo2.png");
     background-repeat: no-repeat;
     background-position: 110% -10%;
 
@@ -159,6 +159,15 @@ a {
     text-align: center;
 }
 
+.botao-principal {
+    background-color: #f0b94a;
+    color: #0a0d2b;
+}
+
+.botao-principal:hover {
+    background-color: #f6d17a;
+}
+
 .botao-vazado {
     background-color: transparent;
     color: #f6f1e7;
@@ -200,7 +209,7 @@ a {
     height: 100%;
     background-color: #1a1f55;
 
-    background-image: url("ImagensPG/FOTOEU.png");
+    background-image: url("../assets/Miguel/FOTOEU.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -372,6 +381,10 @@ a {
     background-color: #e8e2d4;
     border-radius: 1rem;
     color: #6b6b7b;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .projeto h3 {
@@ -395,6 +408,39 @@ a {
 
 .projeto a:hover {
     color: #1a1a3a;
+}
+
+.imagem-apollo {
+    background-image: url("../assets/Miguel/APOLLO.png");
+}
+
+.imagem-roblox {
+    background-image: url("../assets/Miguel/RobloxFOTO.png");
+}
+
+.imagem-orgulho {
+    background-image: url("../assets/Miguel/Vector.png");
+}
+
+.contato {
+    background-color: #10133a;
+    color: #f6f1e7;
+    text-align: center;
+}
+
+.contato .etiqueta {
+    color: #f0b94a;
+}
+
+.contato .titulo {
+    margin-bottom: 1.5rem;
+}
+
+.texto-contato {
+    max-width: 550px;
+    margin: 0 auto 2rem auto;
+    font-family: "Lato", sans-serif;
+    color: #9a9cc0;
 }
 
 .frase {
@@ -431,22 +477,4 @@ a {
 .rodape p {
     font-size: 0.6rem;
     color: #9a9cc0;
-}
-
-.imagem-projeto {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.imagem-apollo {
-    background-image: url("ImagensPG/APOLLO.png");
-}
-
-.imagem-roblox {
-    background-image: url("ImagensPG/RobloxFOTO.png");
-}
-
-.imagem-orgulho {
-    background-image: url("ImagensPG/Vector.png");
 }
