@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0e26">
+  <title>Davi Fernandes | Sol De Midas</title>
+  <link rel="stylesheet" href="css/davi.css">
+</head>
+
+<body id="inicio">
+  <header class="site-header">
+    <a class="brand" href="#inicio">
+      <span class="brand-sun" aria-hidden="true"></span> Sol de Midas
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#sobre">Sobre nós</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="nome">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <h1 id="nome">Davi <span>Fernandes</span></h1>
+          <p class="role">Desenvolvedor fullstack pro max dono da IA</p>
+          <p class="hero-description">Tchore</p>
+          <div class="hero-actions">
+            <a class="button" href="#contato">Falar comigo</a>
+            <a class="button button-outline" href="#projetos">Ver projetos</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="sun-orbit" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <figure class="portrait">
+            <div class="portrait-frame">
+              <span class="portrait-placeholder" aria-hidden="true"></span>
+            </div>
+            <img src="assets/perfil/davi_foto.jpeg" alt="Retrato de Davi Fernandes">
+            <span class="portrait-seal" aria-hidden="true">Membro<br>Ativo</span>
+          </figure>
+        </div>
+
+        <a class="hero-scroll" href="#sobre">Role para conhecer <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="section section-light" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="container about-layout">
+        <div>
+          <p class="eyebrow">Sobre</p>
+          <h2 id="titulo-sobre">Quem é essa pessoa</h2>
+          <p class="section-description">Me chamo Davi, tenho 16 anos, sou de Osasco, e gosto de matemática, Python e estatísticas, busco gostar de inglês também porque não to muito bom kk. No tempo livre gosto de fazer provas passadas da obmep, assistir universo narrado ou jogar com meus amigos</p>
+        </div>
+
+        <dl class="facts">
+          <div><dt>Idade</dt><dd>16 anos</dd></div>
+          <div><dt>Cidade</dt><dd>Osasco, SP</dd></div>
+          <div><dt>Escola / curso</dt><dd>Instituto J&amp;F</dd></div>
+          <div><dt>No projeto desde</dt><dd>Ontem</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section skills" id="habilidades" aria-labelledby="titulo-habilidades">
+      <div class="container">
+        <p class="eyebrow">Habilidades</p>
+        <h2 id="titulo-habilidades">O que sabe fazer</h2>
+
+        <div class="skills-grid">
+          <div class="skill">
+            <label id="skill-1" for="nivel-1">Tênis de mesa</label><span id="valor-1">80%</span>
+            <meter id="nivel-1" min="0" max="100" value="80" aria-labelledby="skill-1" aria-describedby="valor-1"></meter>
+          </div>
+          <div class="skill">
+            <label id="skill-2" for="nivel-2">Github</label><span id="valor-2">65%</span>
+            <meter id="nivel-2" min="0" max="100" value="65" aria-labelledby="skill-2" aria-describedby="valor-2"></meter>
+          </div>
+          <div class="skill">
+            <label id="skill-3" for="nivel-3">Java</label><span id="valor-3">90%</span>
+            <meter id="nivel-3" min="0" max="100" value="90" aria-labelledby="skill-3" aria-describedby="valor-3"></meter>
+          </div>
+          <div class="skill">
+            <label id="skill-4" for="nivel-4">Python</label><span id="valor-4">50%</span>
+            <meter id="nivel-4" min="0" max="100" value="50" aria-labelledby="skill-4" aria-describedby="valor-4"></meter>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light projects" id="projetos" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <p class="eyebrow">Projetos</p>
+        <h2 id="titulo-projetos">O que já fez</h2>
+
+        <div class="projects-grid">
+          <article class="project">
+            <div class="project-copy">
+              <h3>Apollo</h3>
+              <p>O Apollo é um aplicativo de monitoramento e gestão inteligente de placas solares. Meu papel era de dados e front-end.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-copy">
+              <h3>Eletiva 2025</h3>
+              <p>Eletiva mostrando como funciona um rádio.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-copy">
+              <h3>Multidisciplinar</h3>
+              <p>Projeto que reúne as matérias da BNCC para explicar logaritmos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <figure class="quote">
+      <blockquote>“Rápido como um relâmpago, veloz como um foguete”</blockquote>
+      <figcaption>Frase favorita</figcaption>
+    </figure>
+
+    <section class="section contact" id="contato" aria-labelledby="titulo-contato">
+      <div class="container">
+        <h2 id="titulo-contato">Vamos conversar?</h2>
+        <ul class="contact-links">
+          <li>
+            <a href="mailto:davifernandeslinha@gmail.com">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <span><small>E-mail</small>davifernandeslinha@gmail.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Sol De Midas</div>
+  </footer>
+</body>
+</html>
