@@ -1,0 +1,169 @@
+:root {
+  --noite: #080d26;
+  --noite-rodape: #121c3a;
+  --ouro: #d6a23a;
+  --texto-claro: #a29c92;
+  --titulo: #121c3a;
+  --texto: #4a5163;
+  --card-fundo: #f7f7f7;
+  --card-borda: #e4e6ee;
+  --azul-rotulo: #2f54eb;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Lato", system-ui, sans-serif;
+  color: var(--texto);
+  background: #fff;
+  line-height: 1.5;
+}
+
+/* Topo */
+.topo {
+  background: var(--noite);
+  border-bottom: 1px solid var(--ouro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--ouro);
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.topo nav a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.35rem;
+  text-decoration: none;
+  margin-right: 2.5rem;
+}
+.topo a:hover { opacity: .85; }
+.topo a:focus-visible, .botao:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+
+/* Hero */
+.hero {
+  background: var(--noite);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 5rem 5rem 5rem 3.2rem;
+  min-height: 560px;
+}
+.hero-equipe {
+  color: var(--texto-claro);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.hero h1 {
+  font-family: "Cinzel Decorative", serif;
+  font-size: clamp(3rem, 9vw, 7.2rem);
+  line-height: 1.05;
+  color: var(--ouro);
+  white-space: nowrap;
+  margin-bottom: 1.5rem;
+}
+.hero-descricao {
+  max-width: 34rem;
+  color: var(--texto-claro);
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+.botao {
+  display: inline-block;
+  background: var(--ouro);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 1.3rem 2.6rem;
+  border-radius: 999px;
+  margin-left: 1.2rem;
+}
+.botao:hover { filter: brightness(1.08); }
+.hero-sol {
+  width: min(32vw, 460px);
+  flex-shrink: 0;
+}
+
+/* Conteúdo */
+.conteudo {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 4rem 2rem 4.5rem;
+}
+.conteudo h2 {
+  color: var(--titulo);
+  font-size: 2.2rem;
+  margin-bottom: 1.6rem;
+  scroll-margin-top: 1rem;
+}
+.historia {
+  max-width: 72rem;
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+}
+
+/* Equipe */
+.equipe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.card {
+  background: var(--card-fundo);
+  border: 1px solid var(--card-borda);
+  border-radius: 28px;
+  padding: 2.2rem 1.5rem 2.4rem;
+  text-align: center;
+}
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.3rem;
+}
+.card h3 {
+  color: var(--titulo);
+  font-size: 1.5rem;
+  margin-bottom: .8rem;
+}
+.rotulo {
+  display: block;
+  color: var(--azul-rotulo);
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+.card p { font-size: 1.05rem; }
+
+/* Rodapé */
+.rodape {
+  background: var(--noite-rodape);
+  color: var(--texto-claro);
+  text-align: center;
+  padding: 1.7rem 1rem;
+  font-size: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .topo { padding: 1rem 1.2rem; }
+  .marca { font-size: 1.2rem; }
+  .marca img { width: 34px; height: 34px; }
+  .topo nav a { margin-right: 0; font-size: 1.1rem; }
+  .hero { flex-direction: column-reverse; align-items: flex-start; padding: 2.5rem 1.5rem; min-height: 0; }
+  .hero-sol { width: 200px; }
+  .hero h1 { white-space: normal; }
+  .botao { margin-left: 0; }
+}
